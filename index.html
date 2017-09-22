@@ -12,7 +12,7 @@
 	<meta name="twitter:site" content="https://brunoggm.github.io/brigadasipn/">
 	<meta name="twitter:title" content="Ayuda a los afectados del sismo.">
 	<meta name="twitter:description" content="Sitio para reunir apoyo de la comunidad politécnica">
-	<meta name="twitter:image" content="">
+	<meta name="twitter:image" content="https://brunoggm.github.io/brigadasipn/img/mexico34.jpg">
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="Ayuda a los afectados del sismo." />
@@ -46,17 +46,17 @@
 					<a href="#!" class="brand-logo"><img src="img/brand.png" class="brand" alt=""></a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
 					<ul class="right hide-on-med-and-down">
-						<li><a href="sass.html" class="black-text">Sass</a></li>
-						<li><a href="badges.html" class="black-text">Components</a></li>
-						<li><a href="collapsible.html" class="black-text">Javascript</a></li>
-						<li><a href="mobile.html" class="black-text">Mobile</a></li>
+						<li><a href="" class="black-text">Como ayudar</a></li>
+						<li><a href="" class="black-text">Brigadas</a></li>
+						<li><a href="" class="black-text">Organizar brigada</a></li>
+						<li><a href="" class="black-text">Acerca de</a></li>
 					</ul>
 				</div>
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="sass.html" class="black-text">Sass</a></li>
-					<li><a href="badges.html" class="black-text">Components</a></li>
-					<li><a href="collapsible.html" class="black-text">Javascript</a></li>
-					<li><a href="mobile.html" class="black-text">Mobile</a></li>
+					<li><a href="" class="black-text">Como ayudar</a></li>
+					<li><a href="" class="black-text">Brigadas</a></li>
+					<li><a href="" class="black-text">Organizar brigada</a></li>
+					<li><a href="" class="black-text">Acerca de</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -76,28 +76,66 @@
 		</ul>
 	</div>
 
-	<div ng-app="acopio" ng-controller="acopioCtrl" class="container"> 
+	<div class="row">
 
-		<ul>
+		<div id="homeBrigadas" ng-app="acopio" ng-controller="acopioCtrl" class="col s12 m10 push-m1">
 
-			<div class="row">
-				<p>Lista de usuarios.</p>
+			<div class="col s12 titleBrigadas">
+				<h4>Brigadas politécnicas</h4>
 			</div>
-			<div clas="row"><br>
-				<ul>
-					<li ng-repeat="d in data|filter:searchNombre">
-						Tipo: {{ d.tipo }} - Escuela: {{ d.escuela }}
-					</ul>
 
+			<div class="col s12 m4" ng-repeat="d in data | limitTo : 6">
+				<div class="card hoverable">
+					<div class="card-content">
+						<span class="card-title red-text"><h5>{{ d.tipo }}</h5></span>
+						<p>{{ d.lugar}}</p>
+						<br>
+						<div>
+							<div class="left"><b>FECHA:</b> <br> {{d.fecha}}</div>
+
+							<div class="right"><b>HORARIO:</b>  <br> {{d.horario}}</div>
+						</div>
+						<br><br><br>
+						<div>
+							<p> {{d.descrip}} </p>
+						</div>
+					</div>
+					<div class="card-action red darken-1 center">
+						<a href="#{{d.id}}" class="white-text modal-trigger">MÁS INFORMACIÓN</a>
+					</div>
 				</div>
-			</ul>
+
+				<!-- Modal Structure -->
+				<div id="{{d.id}}" class="modal" id="modal">
+					<div class="modal-content">
+						<h4>{{d.id}}</h4>
+						<p>A bunch of text</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col s12 center todas">
+				<a class="waves-effect waves-light btn red darken-1 hoverable">
+					<i class="material-icons right">pan_tool</i>VER TODAS LAS BRIGADAS</a>
+				</div>
+
+
+			</div>
 		</div>
-		<script>
-			$(".button-collapse").sideNav();
-			$('.slider').slider({
-				indicators: false
-			});
-		</script>
+
+
+<script>
+		$(".button-collapse").sideNav();
+		$('.slider').slider({
+					indicators: false,
+					height: 550,
+		});
+
+</script>
 
 	</body>
 	</html>
