@@ -37,13 +37,13 @@ html, body {
 
 .messengerText{
 	position: fixed;
-	bottom: 35px;
-	right: 25px;
+	bottom: 40px;
+	right: 20px;
 	z-index: 999;
 }
 
 .maps{
 	margin-top: 60px;
 	margin-bottom: 60px;
-	
+
 }
