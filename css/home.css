@@ -27,3 +27,23 @@ html, body {
 	margin-top: 30px;
 	margin-bottom: 15px;
 }
+
+.messenger{
+	position: fixed;
+	bottom: 15px;
+	right: 25px;
+	z-index: 999;
+}
+
+.messengerText{
+	position: fixed;
+	bottom: 35px;
+	right: 25px;
+	z-index: 999;
+}
+
+.maps{
+	margin-top: 60px;
+	margin-bottom: 60px;
+	
+}

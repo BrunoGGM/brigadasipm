@@ -37,24 +37,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 	<script type="text/javascript" src="js/acopio.js"></script>
 
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-106861349-1', 'auto');
-		ga('send', 'pageview');
-
-	</script>
-
-
 </head>
-
-
 <body>
-	<!-- FB SDK -->
+
+		<!-- FB SDK -->
 	<script>
 
 		window.fbAsyncInit = function() {
@@ -75,14 +61,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 
 	</script>
-
-	<div style="height: 24px; width: 100%; position: relative; top: 0px;" class="red white-text">
-		.
-	</div>
-	<div style="height: 24px; width: 100%; position: fixed; top: 0px; right: 0px; z-index: 999;" class="red white-text">
-		<marquee behavior="" direction="">ESTE SITIO SE ENCUENTRA EN BETA - Emergencias: 911 - Protección Civil CDMX: 5683-2222 - Locatel CDMX: 5658-1111 </marquee>
-	</div>
-
+	
 	<div class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper white">
@@ -91,13 +70,13 @@
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="http://comoayudar.mx" class="black-text">Como ayudar</a></li>
-						<li><a href="brigadas.html" class="black-text">Brigadas</a></li>
+						<li><a href="" class="black-text">Brigadas</a></li>
 						<li><a href="" class="black-text">Organizar brigada</a></li>
 						<li><a href="" class="black-text">Acerca de</a></li>
 					</ul>
 				</div>
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="como-ayudar.html" class="black-text">Como ayudar</a></li>
+					<li><a href="" class="black-text">Como ayudar</a></li>
 					<li><a href="" class="black-text">Brigadas</a></li>
 					<li><a href="" class="black-text">Organizar brigada</a></li>
 					<li><a href="" class="black-text">Acerca de</a></li>
@@ -106,29 +85,15 @@
 		</nav>
 	</div>
 
-	<div class="slider">
-		<ul class="slides">
-
-			<li>
-				<img src="img/mexico34.jpg"> <!-- random image -->
-				<div class="caption center-align">
-					<h3></h3>
-					<h5 class="light grey-text text-lighten-3"></h5>
-				</div>
-			</li>
-
-		</ul>
-	</div>
-
 	<div class="row">
-
 		<div id="homeBrigadas" ng-app="acopio" ng-controller="acopioCtrl" class="col s12 m10 push-m1">
 
 			<div class="col s12 titleBrigadas">
-				<h4>Brigadas politécnicas</h4>
+				<br><br><br>
+				<h4>Todas la brigadas</h4>
 			</div>
 
-			<div class="col s12 m4" ng-repeat="d in data | limitTo : 6">
+			<div class="col s12 m4" ng-repeat="d in data">
 
 				<div class="card hoverable animated slideInUp">
 					<div class="card-content">
@@ -185,47 +150,11 @@
 
 			</div>
 
-			<div class="col s12 center todas">
-				<a class="waves-effect waves-light btn red darken-1 hoverable animated bounceIn">
-					<i class="material-icons right">pan_tool</i>VER TODAS LAS BRIGADAS</a>
-				</div>
-
 			</div>
+		
+	</div>
 
-				<iframe  class="maps" src="https://www.google.com/maps/d/embed?mid=13B_gbt3e5RWk_6xQoQ15xxhGOFs" width="100%" height="500">
-					
-				</iframe>
-
-		</div>
-
-		<footer class="page-footer grey darken-3">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Brigadas IPN</h5>
-                <p class="grey-text text-lighten-4">Si deseas sumarte como voluntario para ayudar a los afectados por el sismo asiste a esta brigada.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Enlaces</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="http://comoayudar.mx">Como Ayudar</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Brigadas</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Organizar Brigada</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Acerca de</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright  grey darken-4">
-            <div class="container">
-            © 2017 
-            <a class="grey-text text-lighten-4 right" href="https://github.com/BrunoGGM">Desarrollador</a>
-            </div>
-          </div>
-        </footer>
-            
-
-	<div class="messengerText animated pulse">
+		<div class="messengerText animated pulse">
 		<p>
 			ORGANIZA TU BRIGADA
 		</p>
@@ -238,25 +167,15 @@
 		color="blue" 
 		size="xlarge"
 		enforce_login="false">
-	</div>    
+	</div>   
+
 
 	<script>
-		$(document).ready(function(){
-			$(".button-collapse").sideNav();
-			$('.slider').slider({
-				indicators: false,
-				height: 550,
+			$(document).ready(function(){
+				$(".button-collapse").sideNav();
+
 			});
-
-
-			function modal() {
-				$('.modal').modal();
-			}
-
-			setTimeout(modal, 3000);
-		});
 	</script>
 
-
-</body>
-</html>
+	</body>
+	</html>
