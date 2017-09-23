@@ -36,34 +36,47 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 	<script type="text/javascript" src="js/acopio.js"></script>
 
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861349-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments)};
+		gtag('js', new Date());
+
+		gtag('config', 'UA-106861349-1');
+	</script>
+
+
 </head>
 
 
 <body>
-<script>
+	<!-- FB SDK -->
+	<script>
 
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: "678103815717739",
-        xfbml: true,
-        version: "v2.6"
-      });
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId: "678103815717739",
+				xfbml: true,
+				version: "v2.6"
+			});
 
-    };
+		};
 
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) { return; }
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/es_ES/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/es_ES/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 
-  </script>
+	</script>
+
 	<div style="height: 24px; width: 100%; position: relative; top: 0px;" class="red white-text">
-	.
+		.
 	</div>
-			<div style="height: 24px; width: 100%; position: fixed; top: 0px; right: 0px; z-index: 999;" class="red white-text">
+	<div style="height: 24px; width: 100%; position: fixed; top: 0px; right: 0px; z-index: 999;" class="red white-text">
 		<marquee behavior="" direction="">ESTE SITIO SE ENCUENTRA EN BETA - Emergencias: 911 - Protección Civil CDMX: 5683-2222 - Locatel CDMX: 5658-1111 </marquee>
 	</div>
 
@@ -144,14 +157,14 @@
 						<p><b>CONTACTO: </b>{{d.contacto2}}</p>
 						<br>
 						<div>
-						<p>¿Qué se requiere?</p>	
-						<p><b>VIVERES: {{d.viveres}}</b></p>
-						<p><b>MEDICINAS: {{d.medicinas}}</b></p>
-						<p><b>HERRAMIENTAS: {{d.herramientas}}</b></p>
-						<p><b>ASISTENCIA MEDICA: {{d.asistenciamedica}}</b></p>
-						<p><b>ASEO PERSONAL: {{d.aseopersonal}}</b></p>
-						<p><b>ARTICULOS DE LIMPIEZA: {{d.articuloslimpieza}}</b></p>
-						<p><b>AYUDA HUMANA: {{d.ayudahumana}}</b></p>
+							<p>¿Qué se requiere?</p>	
+							<p><b>VIVERES: {{d.viveres}}</b></p>
+							<p><b>MEDICINAS: {{d.medicinas}}</b></p>
+							<p><b>HERRAMIENTAS: {{d.herramientas}}</b></p>
+							<p><b>ASISTENCIA MEDICA: {{d.asistenciamedica}}</b></p>
+							<p><b>ASEO PERSONAL: {{d.aseopersonal}}</b></p>
+							<p><b>ARTICULOS DE LIMPIEZA: {{d.articuloslimpieza}}</b></p>
+							<p><b>AYUDA HUMANA: {{d.ayudahumana}}</b></p>
 
 						</div>
 						<br>
@@ -178,33 +191,33 @@
 			</div>
 		</div>
 
-<div style="position: fixed;bottom: 15px;right: 25px;" 
-  class="fb-messengermessageus" 
-  messenger_app_id="678103815717739" 
-  page_id="835421659853701" 
-  data-ref="PASS_THROUGH_PARAM" 
-  color="blue" 
-  size="xlarge"
-  enforce_login="false">
-</div>    
+	<div style="position: fixed;bottom: 15px;right: 25px;z-index: 999" 
+		class="fb-messengermessageus" 
+		messenger_app_id="678103815717739" 
+		page_id="835421659853701" 
+		data-ref="PASS_THROUGH_PARAM" 
+		color="blue" 
+		size="xlarge"
+		enforce_login="false">
+	</div>    
 
-		<script>
-			$(document).ready(function(){
-				$(".button-collapse").sideNav();
-				$('.slider').slider({
-					indicators: false,
-					height: 550,
-				});
-
-
-				function modal() {
-					$('.modal').modal();
-				}
-
-				setTimeout(modal, 3000);
+	<script>
+		$(document).ready(function(){
+			$(".button-collapse").sideNav();
+			$('.slider').slider({
+				indicators: false,
+				height: 550,
 			});
-		</script>
 
 
-	</body>
-	</html>
+			function modal() {
+				$('.modal').modal();
+			}
+
+			setTimeout(modal, 3000);
+		});
+	</script>
+
+
+</body>
+</html>
